@@ -224,12 +224,12 @@ if ($columnGroupBetaCount == 1) {
 
 #-------------------------------- Item ID ---------------------------------#
 
-$itemId = $jinput->get('Itemid', 0);
+$itemId = $jinput->getInt('Itemid', 0);
 
 #------------------------------- Article ID -------------------------------#
 
 if ($view == 'article') {
-	$articleId = $jinput->get('id');
+	$articleId = $jinput->getInt('id');
 } else {
 	($articleId = NULL);
 }
@@ -251,7 +251,7 @@ function getCategory($id) {
 	}
 }
 
-$catId = getCategory($jinput->get('id'));
+$catId = getCategory($jinput->getInt('id'));
 
 #------------------------- Ancestor Category IDs --------------------------#
 
